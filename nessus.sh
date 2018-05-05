@@ -19,7 +19,7 @@ function link_scanner {
     fi
 }
 
-if [ "$(/opt/nessus/sbin/nessuscli managed status | grep "Linked to" | wc -l)" == "0" ] && [ -n "${LINKING_KEY}" ];then
+if [ "$(/opt/nessus/sbin/nessuscli managed status | grep "Linked to" | wc -l)" == "0" ];then
     link_scanner
 fi
 
